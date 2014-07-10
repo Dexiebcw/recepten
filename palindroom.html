@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Palindroom</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+	<h1>Palindroom</h1>
+	<label>Woord : <input data-bind="value:woord, valueUpdate:'keyup'" autofocus></label>
+	<label>
+	<input type="checkbox" data-bind="checked:hoofdletters">
+	Hoofdlettergevoelig
+	</label>
+	<h1><span data-bind="text:boodschap()"></span></h1>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="palindroom.js"></script>
+</body>
+</html>

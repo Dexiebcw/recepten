@@ -1,0 +1,5 @@
+[
+	{"nummer":1, "naam":"Rock", "link": {"rel":"artists", "href":"genres.1.artists.json"}},
+	{"nummer":2, "naam":"Jazz", "link": {"rel":"artists", "href":"genres.2.artists.json"}},
+	{"nummer":7, "naam":"Bossa Nova", "link": {"rel":"artists", "href":"genres.7.artists.json"}}	 
+]

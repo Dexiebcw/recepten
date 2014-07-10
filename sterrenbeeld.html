@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Sterrenbeeld</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+	<h1>Sterrenbeeld</h1>
+	<label>Dag : <select data-bind="options:dagen, value:dag, optionsCaption:'Maak een keuze'"></select></label>
+	<label>Maand : <select data-bind="options: maanden, value:maand, optionsCaption:'Maak een keuze'"></select></label>
+	<h2 data-bind="text:sterrenbeeld()"></h2>
+	<img id="embleem" data-bind="attr:{src:'images/'+sterrenbeeld()+'.png', alt:sterrenbeeld()}, visible:dag() !== undefined && maand() !== undefined" style="display: none">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="sterrenbeeld.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Conversie</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+	<h1>Conversie</h1>
+	<label>Afstand : <input data-bind="value:afstand, valueUpdate:'keyup'"></label>
+	<div><label>
+	<input type="radio" name="keuze" value="C" data-bind="checked:keuze">Centimeters naar inches</label></div>
+	<div><label>
+	<input type="radio" name="keuze" value="I" data-bind="checked:keuze">Inches naar centimeters</label></div>	
+	<h2 data-bind="text:'Geconverteerde afstand : '+converteer()"></h2>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="conversie.js"></script>
+</body>
+</html>

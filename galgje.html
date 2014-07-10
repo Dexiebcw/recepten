@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Galgje</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+	<h1>Galgje</h1>
+	<div>Te raden saus : <span data-bind="text:puntjes()"></span></div>
+	<label>Letter
+	<input data-bind="value:letter" maxlength="1" size="1" autofocus id="Letter">
+	<button data-bind="click:raden">Raden</button>
+	</label>
+	<div data-bind="text:boodschap()"></div>
+	<div><img data-bind="attr:{src:'images/'+aantalVerkeerdePogingen()+'.png', alt:aantalVerkeerdePogingen()+ ' verkeerde pogingen'}"></div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="galgje.js"></script>
+</body>
+</html>

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-<meta charset="UTF-8">
-<title>Recepten</title>
-<link rel="stylesheet" href="default.css">
+	<meta charset="UTF-8">
+	<title>Werknemers</title>
+	<link rel="stylesheet" href="default.css">
 </head>
 <body>
-	<h1>Recepten</h1>
-	<nav>
-		<ul>
-			<li><a href="pannenkoeken.html">Pannenkoeken</a></li>
-			<li><a href="wafels.html">Wafels</a></li>
-			<li><a href="oliebollen.html">Oliebollen</a></li>
-			<li><a href="mattentaart.html">Mattentaart</a></li>
-		</ul>
-	</nav>
+	<h1>Werknemers</h1>
+	<dl>
+	<dt>Voornaam</dt>
+	<dd data-bind="text:voornaam"></dd>
+	<dt>Familienaam</dt>
+	<dd data-bind="text:familienaam"></dd>
+	<dt>wedde</dt>
+	<dd data-bind="text:wedde(), css:{groteWedde:wedde()>=7000, kleineWedde:wedde()<5000}"></dd>
+	</dl>
+	<label>Voornaaam : <input data-bind="value:voornaam, valueUpdate:'keyup'"></label>
+	<label>Familienaam : <input data-bind="value:familienaam, valueUpdate:'keyup'"></label>
+	<img id="embleem" data-bind="attr:{src:'images/'+auto()+'.png', alt:auto()}">
+	<button data-bind="enable:wedde()<10000, click:opslag">Opslag</button>
+	<button data-bind="click:nettoWedde">Netto Wedde</button>	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="index.js"></script>
 </body>
 </html>

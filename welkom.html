@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Welkomboodschap</title>
+	<link rel="stylesheet" href="default.css">
+</head>
+<body>
+	<h1>Het is <span data-bind="text:uur()"</span></h1>
+	<h1>Goede <span data-bind="text:tijdstip()"></span></h1>
+	<img id="afbeedling" data-bind="attr:{src:'images/'+tijdstip()+'.jpg', alt:tijdstip()}">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+	<script src="welkom.js"></script>
+</body>
+</html>

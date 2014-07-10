@@ -33,10 +33,10 @@ var viewModel = {
 		this.letter("");
 		document.getElementById("Letter").focus();
 		if (this.aantalVerkeerdePogingen() === 10)
-			{ this.boodschap("U bent verloren, de saus was " + teRadenSaus);}
+			{ this.boodschap("U bent verloren, de drank was " + teRadenSaus);}
 		else
 			if (teRadenSaus === this.puntjes())
-				{ this.boodschap("U hebt gewonnen, de saus was " + teRadenSaus);}
+				{ this.boodschap("U hebt gewonnen, de drank was " + teRadenSaus);}
 	}
 };
 ko.applyBindings(viewModel);
